@@ -5,7 +5,9 @@ exports.up = function(knex) {
         table.string("fullName");
         table.string("accHash").unique();
         table.string("email").notNullable().unique();
-           table.timestamps(false, true);
+        table.string("image").defaultTo("https://www.securityindustry.org/wp-content/uploads/sites/3/2018/05/noimage.png");
+         
+        table.timestamps(false, true);
     })
   
 };
